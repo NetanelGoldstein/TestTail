@@ -9,7 +9,7 @@ public class MovePlayer : MonoBehaviour
     Rigidbody2D _rb;
     public Rigidbody2D jumpRB;
 
-    float _playerSpeed = 2f;
+    float _playerSpeed = 5f;
 
     //when we grab input using horizontal - means going to left, and positive number means right
     float _inputHorizontal;
