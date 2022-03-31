@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// hello world, delete me
 public class MovePlayer : MonoBehaviour
 {
 
