@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-// hello world, delete me
 public class MovePlayer : MonoBehaviour
 {
 
-    //container for the object
+    //container for the object    
     Rigidbody2D _rb;
     public Rigidbody2D jumpRB;
 
@@ -75,13 +74,13 @@ public class MovePlayer : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit2D(Collision2D other)
+    private void OnCollisionExit2D(Collision2D other) 
     {
-        if (other.gameObject.CompareTag("Ground"))
-
+        if (other.gameObject.CompareTag("Ground")) 
+        
         {
             isJumping = true;
         }
-
+    
     }
 }
