@@ -10,7 +10,7 @@ public class MovePlayer : MonoBehaviour
     public Rigidbody2D jumpRB;
     // NG Test Change
     // Hey this ones for you
-    float _playerSpeed = 3f;
+    float _playerSpeed = 5f;
 
     //when we grab input using horizontal - means going to left, and positive number means right
     float _inputHorizontal;
