@@ -11,7 +11,7 @@ public class MovePlayer : MonoBehaviour
     // NG Test Change
     // Hey this ones for you
     float _playerSpeed = 5f;
-    //do you see this change?
+
 
     //when we grab input using horizontal - means going to left, and positive number means right
     float _inputHorizontal;
