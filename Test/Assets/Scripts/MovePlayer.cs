@@ -12,7 +12,12 @@ public class MovePlayer : MonoBehaviour
     // Shawn, please let me know if you like this speed
     float _playerSpeed = 3f;
 
+<<<<<<< Updated upstream
 
+=======
+    float _playerSpeed = 3f;
+// can you see it
+>>>>>>> Stashed changes
     //when we grab input using horizontal - means going to left, and positive number means right
     float _inputHorizontal;
 
