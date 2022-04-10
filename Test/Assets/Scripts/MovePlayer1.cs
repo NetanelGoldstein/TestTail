@@ -49,7 +49,7 @@ public class MovePlayer1 : MonoBehaviour
             faceingRight = true;
         }
 
-       // currentScale = transform.localScale;
+       
     }
 }
 
