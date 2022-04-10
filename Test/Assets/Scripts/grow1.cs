@@ -6,9 +6,9 @@ public class grow1 : MonoBehaviour
 {
     // with help from https://gamedev.stackexchange.com/questions/105378/how-to-change-the-transparency-of-an-object-in-using-code
     //
-    // This circle grows. In addition, the Alpha value (Transparency) shrinks. 
-    // When Alph hits 0, (i.e. it's invisible) the object returns to it's original size and alpha updates to fully tranparent
-    // in short, it repeatedly grows, disapears, and starts again
+    // This object grows. In addition, the Alpha value (Transparency) shrinks. 
+    // When Alpha hits 0, (i.e. it's invisible) the object returns to it's original size and alpha updates to partially visible
+    // in short, it repeatedly grows, disappears, and starts again
 
     private Material currentMat;
     public float speed = .3f;
@@ -25,6 +25,7 @@ public class grow1 : MonoBehaviour
         currentMat = gameObject.GetComponent<Renderer>().material;
         startSize = transform.localScale;
         startPos = transform.position;
+       
     }
 
     // Update is called once per frame
@@ -35,9 +36,10 @@ public class grow1 : MonoBehaviour
         temp.y += speed;
         transform.localScale = temp;
         ChangeAlpha(disappear);
+        // Measures if transparency at minimum threshold
         if(currentMat.color.a <= killValue)
         {
-           
+           // sets it to original size, shape, and tranparency of newAlpha
             transform.localScale = startSize;
             ChangeAlpha(-newAlpha);
             transform.position = startPos;
