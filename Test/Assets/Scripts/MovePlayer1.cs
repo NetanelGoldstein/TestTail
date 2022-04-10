@@ -10,6 +10,8 @@ public class MovePlayer1 : MonoBehaviour
     Rigidbody2D rb;
     float horizontalValue;
 
+    bool faceingRight = true;
+
 
     void Awake()
     {
@@ -31,6 +33,23 @@ public class MovePlayer1 : MonoBehaviour
         float xVal = dir * speed * Time.deltaTime;
         Vector2 targetVelocity = new Vector2(xVal, rb.velocity.y);
         rb.velocity = targetVelocity;
+
+
+        //if looking right, click left, flip left
+        if (faceingRight && dir < 0)
+        {
+            transform.localScale = new Vector3 (-2,3,2); //flip right to left
+            faceingRight = false;
+        }
+
+        //if looking left, click right, flip right
+        else if (!faceingRight && dir > 0)
+        {
+            transform.localScale = new Vector3(2, 3, 2); ; //flip right
+            faceingRight = true;
+        }
+
+       // currentScale = transform.localScale;
     }
 }
 
