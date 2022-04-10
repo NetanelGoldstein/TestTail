@@ -9,13 +9,14 @@ public class MovePlayer1 : MonoBehaviour
 
     Rigidbody2D rb;
     float horizontalValue;
-
+    Animator animator;
     bool faceingRight = true;
 
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
     }
 
     void Update()
@@ -49,7 +50,10 @@ public class MovePlayer1 : MonoBehaviour
             faceingRight = true;
         }
 
-       
+        //0 idle, 4 running
+        //Set the float xVelocity accoding to the x value of the
+        //RigidBody2D velocity
+        animator.SetFloat("xVelocity", Mathf.Abs(rb.velocity.x));
     }
 }
 
