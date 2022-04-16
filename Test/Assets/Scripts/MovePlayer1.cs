@@ -31,13 +31,16 @@ public class MovePlayer1 : MonoBehaviour
 
         if (Input.GetButtonDown("Jump"))
         {
+            animator.SetBool("Jump", true);
             jump = true;
         }
         else if (Input.GetButtonUp("Jump"))
         {
             jump = false;
         }
-        
+
+        //Set yVelocity in the animator
+        animator.SetFloat("yVelocity", rb.velocity.y);
 
     }
 
@@ -57,9 +60,13 @@ public class MovePlayer1 : MonoBehaviour
 
         Collider2D[] colliders = Physics2D.OverlapCircleAll(groundCheckCollider.position, groundCheckRadius, groundLayer);
         if (colliders.Length > 0)
-        {
+        
             isGrounded = true;
-        }
+
+            //As long as we are grounded the "Jump" bool in
+            //the animator is disabled
+            animator.SetBool("Jump", !isGrounded);
+        
     }
 
 
@@ -70,7 +77,7 @@ public class MovePlayer1 : MonoBehaviour
         //If player is grounded and presses space, jump
         if (isGrounded && jumpFlag)
         {
-            isGrounded = true;
+            isGrounded = false;
             jumpFlag = false;
             rb.AddForce(new Vector2(0f, jumpPower));
         }
