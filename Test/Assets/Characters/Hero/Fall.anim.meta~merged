@@ -1,12 +1,12 @@
 fileFormatVersion: 2
 <<<<<<< HEAD
-<<<<<<< HEAD:Test/Assets/Characters/Hero/Fall.anim.meta
 guid: 4a46c1b0b2a7fbe408fcc85784900789
 =======
-guid: 3d575ce1def304448869312211b0e0f5
->>>>>>> parent of 1bdbe4d (Revert "Hero jump animations"):Test/Assets/Characters/Hero/Jump.anim.meta
+<<<<<<< HEAD:Test/Assets/Characters/Fox/idle.anim.meta
+guid: 4d41179898500ad498a7ca95b350fd6f
 =======
 guid: 4a46c1b0b2a7fbe408fcc85784900789
+>>>>>>> parent of 1bdbe4d (Revert "Hero jump animations"):Test/Assets/Characters/Hero/Fall.anim.meta
 >>>>>>> parent of 1bdbe4d (Revert "Hero jump animations")
 NativeFormatImporter:
   externalObjects: {}

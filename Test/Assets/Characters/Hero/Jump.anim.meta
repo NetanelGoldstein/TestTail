@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 3d575ce1def304448869312211b0e0f5
+=======
+<<<<<<< HEAD:Test/Assets/Characters/Hero/Fall.anim.meta
+guid: 4a46c1b0b2a7fbe408fcc85784900789
+=======
+guid: 3d575ce1def304448869312211b0e0f5
+>>>>>>> parent of 1bdbe4d (Revert "Hero jump animations"):Test/Assets/Characters/Hero/Jump.anim.meta
+>>>>>>> parent of 1bdbe4d (Revert "Hero jump animations")
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 7400000
