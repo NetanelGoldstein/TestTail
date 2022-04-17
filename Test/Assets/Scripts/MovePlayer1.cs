@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MovePlayer1 : MonoBehaviour
+/**
+ * with help from tutorials from https://www.youtube.com/c/Antarsoft
+ * player moves left, right, and can jump onto and off of platforms
+ * **/
 
 {
     public float speed = 300;
