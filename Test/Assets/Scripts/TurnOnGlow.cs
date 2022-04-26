@@ -5,8 +5,7 @@ using UnityEngine;
 public class TurnOnGlow : MonoBehaviour
 {
     //This script can be attached to an game object with a 2d collider.
-    // it will deduct whatever "Damage" is set to from the Health Bar
-    // It also has an audio source component that can sound on contact
+    // i
 
     public AudioSource source;
     private GameObject HeroGlow;
@@ -17,7 +16,8 @@ public class TurnOnGlow : MonoBehaviour
     void Start()
     {
         source = GetComponent<AudioSource>();
-        
+        HeroGlow = GameObject.Find("HeroGlow");
+        HeroGlow.GetComponent<SpriteRenderer>().enabled = false;
     }
 
     // Update is called once per frame
@@ -48,10 +48,7 @@ public class TurnOnGlow : MonoBehaviour
             }
             Debug.Log("TurnOnGlow Script registered collision");
             counter = SetCounterTo;
-            if (source != null)
-            {
-                source.Play();
-            }
+            
             
             
         }
