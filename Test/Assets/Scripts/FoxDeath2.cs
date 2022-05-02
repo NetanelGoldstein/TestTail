@@ -12,6 +12,7 @@ public class FoxDeath2 : MonoBehaviour
     private GameObject HeroGlow;
     private GameObject RedGamma;
     public AudioSource source;
+    private GameObject HealthBar;
     void Start()
     {
         Fox = GameObject.Find("Fox");
@@ -19,6 +20,7 @@ public class FoxDeath2 : MonoBehaviour
         HeroGlow = GameObject.Find("HeroGlow");
         RedGamma = GameObject.Find("RedGamma");
         source = GetComponent<AudioSource>();
+        HealthBar = GameObject.Find("HB");
     }
 
     // Update is called once per frame
@@ -26,6 +28,13 @@ public class FoxDeath2 : MonoBehaviour
     {
 
     }
+
+
+    /// <summary>
+    ///  If hero is glowing, blows up fox on contact, else hero blows up
+    /// 
+    /// </summary>
+    /// <param name="col"></param>
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.name == "Fox")
@@ -42,6 +51,15 @@ public class FoxDeath2 : MonoBehaviour
 
                 Destroy(Fox);
                 Destroy(RedGamma);
+            }
+            else
+            {
+                Vector2 temp;
+
+                temp = HealthBar.transform.localScale;
+                temp.x = 0;
+                HealthBar.transform.localScale = temp;
+                
             }
         }
     }
