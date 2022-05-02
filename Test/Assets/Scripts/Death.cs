@@ -24,6 +24,7 @@ public class Death : MonoBehaviour
     {
         if(HealthBar.transform.localScale.x <= 0)
         {
+            // The following makes sure the death animation is only triggeres once and not on every frame
             if (NotKilledYet)
             {
                 ExplodingObject.Set(Hero.transform.position.x, Hero.transform.position.y, 0);
