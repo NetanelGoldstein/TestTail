@@ -9,7 +9,7 @@ public class MovePlayer1 : MonoBehaviour
  * **/
 
 {
-    public float speed = 301;
+    public float speed = 300;
 
     Rigidbody2D rb;
     const float groundCheckRadius = 0.2f;
