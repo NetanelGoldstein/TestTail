@@ -29,7 +29,7 @@ public class Death : MonoBehaviour
             {
                 ExplodingObject.Set(Hero.transform.position.x, Hero.transform.position.y, 0);
                 Instantiate(Explosion, ExplodingObject, Quaternion.identity);
-                Hero = GameObject.Find("Hero");
+                
                 if(source != null)
                 {
                     source.Play();
